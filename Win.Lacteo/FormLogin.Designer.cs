@@ -109,9 +109,9 @@
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(355, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(389, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(380, 323);
+            this.pictureBox4.Size = new System.Drawing.Size(380, 372);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(735, 323);
+            this.ClientSize = new System.Drawing.Size(769, 372);
             this.ControlBox = false;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
