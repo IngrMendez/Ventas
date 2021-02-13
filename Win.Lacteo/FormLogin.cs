@@ -30,13 +30,13 @@ namespace Win.Lacteo
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
 
-            if (usuario == "admin" && contraseña == "1234" || usuario == "coord" && contraseña == "123")
+            if (usuario == "admin" && contraseña == "1234" || usuario == "invitado" && contraseña == "123")
             {
                 this.Close();
             }
             else
             {
-                MessageBox.Show("usuario o contraseña incorrecta");
+                MessageBox.Show(" Usuario o contraseña incorrecta ");
             }
         }
 
@@ -46,6 +46,21 @@ namespace Win.Lacteo
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
