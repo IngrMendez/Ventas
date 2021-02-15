@@ -94,6 +94,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL.Lacteos.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.Lacteos.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Lacteos.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Lacteos\BL.Lacteos.csproj">
+      <Project>{17144186-6c60-4763-a086-80c0f112e68d}</Project>
+      <Name>BL.Lacteos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

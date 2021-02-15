@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Lacteos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Win.Lacteo
 {
     public partial class FormLogin : Form
     {
+
+        SeguridadBL _seguridad;
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,19 +29,23 @@ namespace Win.Lacteo
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             string usuario;
-            string contraseña;
+            string contrasena;
 
             usuario = textBox1.Text;
-            contraseña = textBox2.Text;
+            contrasena = textBox2.Text;
 
-            if (usuario == "admin" && contraseña == "1234" || usuario == "invitado" && contraseña == "123")
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
+
+            if (resultado == true)
             {
                 this.Close();
+
             }
             else
             {
-                MessageBox.Show(" Usuario o contraseña incorrecta ");
+                MessageBox.Show("Usuario o contraseña incorrecta");
             }
         }
 
@@ -64,5 +73,11 @@ namespace Win.Lacteo
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
