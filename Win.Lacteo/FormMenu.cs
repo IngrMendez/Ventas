@@ -30,9 +30,7 @@ namespace Win.Lacteo
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formProductos = new FormProductos();
-            formProductos.MdiParent = this;
-            formProductos.Show();
+            
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,6 +46,21 @@ namespace Win.Lacteo
         }
 
         private void reporteDeLacteosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            var formProductos = new FormProductos();
+            formProductos.MdiParent = this;
+            formProductos.Show();
+
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
