@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BL.Lacteos;
+using BL.Lacteo;
 
 namespace Win.Lacteo
 {

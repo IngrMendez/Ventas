@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win.Lacteo", "Win.Lacteo\Win.Lacteo.csproj", "{A4107F8B-2DE6-41D4-91A9-231DEF27ACE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Lacteos", "BL.Lacteos\BL.Lacteos.csproj", "{17144186-6C60-4763-A086-80C0F112E68D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Lacteo", "BL.Lacteo\BL.Lacteo.csproj", "{C4CC2E6D-2CB4-42B1-8B31-80F969189C54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A4107F8B-2DE6-41D4-91A9-231DEF27ACE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4107F8B-2DE6-41D4-91A9-231DEF27ACE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4107F8B-2DE6-41D4-91A9-231DEF27ACE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17144186-6C60-4763-A086-80C0F112E68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17144186-6C60-4763-A086-80C0F112E68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17144186-6C60-4763-A086-80C0F112E68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17144186-6C60-4763-A086-80C0F112E68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4CC2E6D-2CB4-42B1-8B31-80F969189C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4CC2E6D-2CB4-42B1-8B31-80F969189C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4CC2E6D-2CB4-42B1-8B31-80F969189C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4CC2E6D-2CB4-42B1-8B31-80F969189C54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

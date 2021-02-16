@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BL.Lacteos
+namespace BL.Lacteo
 {
     public class SeguridadBL
     {

@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Win.Lacteo</RootNamespace>
     <AssemblyName>Win.Lacteo</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -114,13 +115,13 @@
     <None Include="Resources\images.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BL.Lacteos\BL.Lacteos.csproj">
-      <Project>{17144186-6c60-4763-a086-80c0f112e68d}</Project>
-      <Name>BL.Lacteos</Name>
-    </ProjectReference>
+    <None Include="Resources\vaca.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\vaca.jpg" />
+    <ProjectReference Include="..\BL.Lacteo\BL.Lacteo.csproj">
+      <Project>{c4cc2e6d-2cb4-42b1-8b31-80f969189c54}</Project>
+      <Name>BL.Lacteo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

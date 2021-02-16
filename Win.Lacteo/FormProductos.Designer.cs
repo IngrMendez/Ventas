@@ -58,7 +58,7 @@
             // 
             // listaProductosBindingSource
             // 
-            this.listaProductosBindingSource.DataSource = typeof(BL.Lacteos.Producto);
+            this.listaProductosBindingSource.DataSource = typeof(BL.Lacteo.Producto);
             // 
             // listaProductosBindingNavigator
             // 
