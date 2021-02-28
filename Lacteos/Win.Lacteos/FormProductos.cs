@@ -1,12 +1,5 @@
 ﻿using BL.Lacteos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Win.Lacteos
@@ -44,7 +37,6 @@ namespace Win.Lacteos
             else
                {
                 MessageBox.Show(resultado.Mensaje);
-
             }
         }
 
@@ -54,7 +46,6 @@ namespace Win.Lacteos
             listaProductosBindingSource1.MoveLast();
 
             DesabilitarHabilitarBotones(false);
-
         }
 
         private void DesabilitarHabilitarBotones(bool valor)
@@ -72,27 +63,21 @@ namespace Win.Lacteos
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-           
+
                 if (idTextBox.Text != "")
 
                 {
-                var resultado = MessageBox.Show("Desea eliminar este registro", "Eliminar", MessageBoxButtons.YesNo);
-                    );
-
+                var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
-
-                   
                 {
                     var id = Convert.ToInt32(idTextBox.Text);
-                    Elininar(id);
+                    Eliminar(id);
                 }
-            } 
-           
+            }      
         }
 
-        private void Elininar(int id)
+        private void Eliminar(int id)
         {
-
             var resultado = _productos.EliminarProducto(id);
 
             if (resultado == true)
@@ -108,7 +93,7 @@ namespace Win.Lacteos
         private void toolStripButton1Cancelar_Click(object sender, EventArgs e)
         {
             DesabilitarHabilitarBotones(true);
-            Elininar(0);
+            Eliminar(0);
         }
     }
 }

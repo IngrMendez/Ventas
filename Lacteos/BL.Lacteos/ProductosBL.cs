@@ -62,10 +62,6 @@ namespace BL.Lacteos
             ListaProductos.Add(producto5);
         }
 
-        public object EliminarProducto(object id)
-        {
-            throw new NotImplementedException();
-        }
 
         public BindingList<Producto> ObtenerProductos()
         {
