@@ -8,10 +8,6 @@ namespace Win.Lacteos
     {
         ProductosBL _productos;
 
-        public object id { get; private set; }
-        public object MenssageBox { get; private set; }
-        public object YesNo { get; private set; }
-        public object MessageBoxButtons { get; private set; }
 
         public FormProductos()
         {
