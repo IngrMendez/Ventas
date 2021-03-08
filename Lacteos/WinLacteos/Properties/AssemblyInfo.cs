@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Win.Lacteos")]
+[assembly: AssemblyTitle("WinLacteos")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hewlett-Packard")]
-[assembly: AssemblyProduct("Win.Lacteos")]
+[assembly: AssemblyProduct("WinLacteos")]
 [assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("d1920b29-587a-41d8-9baf-e41f1e010a70")]
+[assembly: Guid("5c655bc0-239c-4e67-88ad-d505eefa6a2e")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

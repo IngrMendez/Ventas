@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win.Lacteos", "Win.Lacteos\Win.Lacteos.csproj", "{D1920B29-587A-41D8-9BAF-E41F1E010A70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinLacteos", "WinLacteos\WinLacteos.csproj", "{5C655BC0-239C-4E67-88AD-D505EEFA6A2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Lacteos", "BL.Lacteos\BL.Lacteos.csproj", "{BB7D20AC-8F43-4DD2-97A1-476670E82B65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Lacteos", "BL.Lacteos\BL.Lacteos.csproj", "{BE04134E-47D5-4BAB-8E98-BA42659918D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D1920B29-587A-41D8-9BAF-E41F1E010A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1920B29-587A-41D8-9BAF-E41F1E010A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1920B29-587A-41D8-9BAF-E41F1E010A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1920B29-587A-41D8-9BAF-E41F1E010A70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB7D20AC-8F43-4DD2-97A1-476670E82B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB7D20AC-8F43-4DD2-97A1-476670E82B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB7D20AC-8F43-4DD2-97A1-476670E82B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB7D20AC-8F43-4DD2-97A1-476670E82B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C655BC0-239C-4E67-88AD-D505EEFA6A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C655BC0-239C-4E67-88AD-D505EEFA6A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C655BC0-239C-4E67-88AD-D505EEFA6A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C655BC0-239C-4E67-88AD-D505EEFA6A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE04134E-47D5-4BAB-8E98-BA42659918D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE04134E-47D5-4BAB-8E98-BA42659918D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE04134E-47D5-4BAB-8E98-BA42659918D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE04134E-47D5-4BAB-8E98-BA42659918D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

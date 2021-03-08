@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Win.Lacteos
+namespace WinLacteos
 {
     public partial class FormLogin : Form
     {
@@ -35,19 +35,16 @@ namespace Win.Lacteos
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
-            var resultado = _seguridad.Autorizar(usuario, contrasena);
+           var resultado = _seguridad.Autorizar(usuario, contrasena);
 
             if (resultado == true)
-
-
-            {
+                {
                 this.Close();
-
             }
-             else
-             {
-                MessageBox.Show("Usuario o contraseña incorrecta");
+            else
+            {
+                MessageBox.Show("Usuario o Contraseña incorrecta");
             }
-         }
+        }
     }
 }

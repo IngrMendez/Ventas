@@ -1,4 +1,4 @@
-﻿namespace Win.Lacteos
+﻿namespace WinLacteos
 {
     partial class FormClientes
     {

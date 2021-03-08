@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Win.Lacteos
+namespace WinLacteos
 {
     public partial class FormMenu : Form
     {
@@ -17,26 +17,24 @@ namespace Win.Lacteos
             InitializeComponent();
         }
 
-        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login();
-    }
-
+        }
         private void Login()
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formProductos = new FormProductos();
             formProductos.MdiParent = this;
             formProductos.Show();
+        }
 
-          }
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formClientes = new FormClientes();
             formClientes.MdiParent = this;
@@ -48,17 +46,11 @@ namespace Win.Lacteos
             Login();
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        private void listaProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formProductos = new FormProductos();
             formProductos.MdiParent = this;
             formProductos.Show();
-
         }
     }
-    }
+}

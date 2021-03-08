@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Win.Lacteos
+namespace WinLacteos
 {
     public partial class FormClientes : Form
     {

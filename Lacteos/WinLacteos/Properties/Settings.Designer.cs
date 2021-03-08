@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Win.Lacteos.Properties
+namespace WinLacteos.Properties
 {
 
 
