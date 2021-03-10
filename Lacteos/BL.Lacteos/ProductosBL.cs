@@ -23,6 +23,7 @@ namespace BL.Lacteos
         {
             _contexto.Productos.Load();
             ListaProductos = _contexto.Productos.Local.ToBindingList();
+
             return ListaProductos;
 
         }
@@ -59,10 +60,19 @@ namespace BL.Lacteos
             return false;
         }
         private Resultado Validar(Producto producto)
-            {
+        {
             var resultado = new Resultado();
             resultado.Exitoso = true;
-           
+
+            if (producto == null)
+            {
+                resultado.Mensaje = "Agregue un producto valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
+
             if (string.IsNullOrEmpty(producto.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese una descripcion";
@@ -79,9 +89,20 @@ namespace BL.Lacteos
             {
                 resultado.Mensaje = "El precio debe ser mayor que cero";
                 resultado.Exitoso = false;
+                if (producto.TipoId == 0)
+                {
+                    resultado.Mensaje = "Seleccione un Tipo";
+                    resultado.Exitoso = false;
+                }
+
+                if (producto.CategoriaId == 0)
+                {
+                    resultado.Mensaje = "Seleccione una categoria";
+                    resultado.Exitoso = false;
+                }
+
+                return resultado;
             }
-            return resultado;
-        }
     }
     public class Producto
     {
@@ -89,6 +110,10 @@ namespace BL.Lacteos
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int Existencia { get; set; }
+        public int CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
         public byte[] Foto { get; set; }
         public bool Activo { get; set; }
     }
@@ -96,5 +121,6 @@ namespace BL.Lacteos
         {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
+        }
     }
 }

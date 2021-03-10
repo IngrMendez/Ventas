@@ -35,16 +35,24 @@ namespace WinLacteos
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
-           var resultado = _seguridad.Autorizar(usuario, contrasena);
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
+
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
 
             if (resultado == true)
-                {
+            {
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Usuario o Contraseña incorrecta");
+                MessageBox.Show("Usuario o contraseña incorrecta");
             }
+
+            button1.Enabled = true;
+            button1.Text = "Aceptar";
+        }
         }
     }
 }
