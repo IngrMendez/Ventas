@@ -46,6 +46,7 @@ namespace BL.Lacteos
             ListaProductos.Add(nuevoProducto);
         }
 
+
         public bool EliminarProducto(int id)
         {
             foreach (var producto in ListaProductos)

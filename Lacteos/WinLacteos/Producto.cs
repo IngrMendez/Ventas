@@ -2,5 +2,6 @@
 {
     internal class Producto
     {
+        internal byte[] Foto;
     }
 }

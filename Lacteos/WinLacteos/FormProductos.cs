@@ -14,15 +14,22 @@ namespace WinLacteos
 {
     public partial class FormProductos : Form
     {
-     
+
         ProductosBL _productos;
+        CategoriaBL _categorias;
+
+        private object listaCategoriasBindingSource;
 
         public FormProductos()
         {
             InitializeComponent();
 
             _productos = new ProductosBL();
-           listaProductosBindingSource.DataSource= _productos.ObtenerProductos();
+            listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+
+            _categorias = new CategoriaBL();
+            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
         }
 
         private void productoBindingNavigatorSaveItem_Click(object sender, EventArgs e)

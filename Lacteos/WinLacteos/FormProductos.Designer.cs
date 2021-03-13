@@ -36,6 +36,7 @@
             System.Windows.Forms.Label precioLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -58,9 +59,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.categoriaIdcomboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             descripcionLabel = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
@@ -68,15 +70,15 @@
             precioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).BeginInit();
             this.listaProductosBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // descripcionLabel
             // 
             descripcionLabel.AutoSize = true;
             descripcionLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descripcionLabel.Location = new System.Drawing.Point(31, 136);
+            descripcionLabel.Location = new System.Drawing.Point(28, 156);
             descripcionLabel.Name = "descripcionLabel";
             descripcionLabel.Size = new System.Drawing.Size(82, 17);
             descripcionLabel.TabIndex = 1;
@@ -86,7 +88,7 @@
             // 
             activoLabel.AutoSize = true;
             activoLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            activoLabel.Location = new System.Drawing.Point(28, 244);
+            activoLabel.Location = new System.Drawing.Point(25, 264);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(52, 17);
             activoLabel.TabIndex = 3;
@@ -96,7 +98,7 @@
             // 
             existenciaLabel.AutoSize = true;
             existenciaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            existenciaLabel.Location = new System.Drawing.Point(28, 212);
+            existenciaLabel.Location = new System.Drawing.Point(25, 232);
             existenciaLabel.Name = "existenciaLabel";
             existenciaLabel.Size = new System.Drawing.Size(70, 17);
             existenciaLabel.TabIndex = 5;
@@ -106,7 +108,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(48, 56);
+            idLabel.Location = new System.Drawing.Point(55, 44);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(22, 17);
             idLabel.TabIndex = 7;
@@ -116,7 +118,7 @@
             // 
             precioLabel.AutoSize = true;
             precioLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precioLabel.Location = new System.Drawing.Point(31, 174);
+            precioLabel.Location = new System.Drawing.Point(28, 194);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(49, 17);
             precioLabel.TabIndex = 9;
@@ -125,7 +127,6 @@
             // listaProductosBindingNavigator
             // 
             this.listaProductosBindingNavigator.AddNewItem = null;
-            this.listaProductosBindingNavigator.BindingSource = this.listaProductosBindingSource;
             this.listaProductosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaProductosBindingNavigator.DeleteItem = null;
             this.listaProductosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -152,6 +153,10 @@
             this.listaProductosBindingNavigator.Size = new System.Drawing.Size(733, 25);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // listaProductosBindingSource
+            // 
+            this.listaProductosBindingSource.DataSource = typeof(BL.Lacteos.Producto);
             // 
             // bindingNavigatorCountItem
             // 
@@ -263,7 +268,7 @@
             // descripcionTextBox
             // 
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
-            this.descripcionTextBox.Location = new System.Drawing.Point(126, 133);
+            this.descripcionTextBox.Location = new System.Drawing.Point(123, 155);
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(271, 20);
             this.descripcionTextBox.TabIndex = 2;
@@ -272,7 +277,7 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "Activo", true));
             this.activoCheckBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheckBox.Location = new System.Drawing.Point(126, 244);
+            this.activoCheckBox.Location = new System.Drawing.Point(123, 264);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(284, 21);
             this.activoCheckBox.TabIndex = 4;
@@ -281,7 +286,7 @@
             // existenciaTextBox
             // 
             this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Existencia", true));
-            this.existenciaTextBox.Location = new System.Drawing.Point(126, 209);
+            this.existenciaTextBox.Location = new System.Drawing.Point(123, 229);
             this.existenciaTextBox.Name = "existenciaTextBox";
             this.existenciaTextBox.Size = new System.Drawing.Size(271, 20);
             this.existenciaTextBox.TabIndex = 6;
@@ -289,7 +294,7 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(126, 53);
+            this.idTextBox.Location = new System.Drawing.Point(123, 41);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(271, 20);
@@ -298,7 +303,7 @@
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(126, 171);
+            this.precioTextBox.Location = new System.Drawing.Point(123, 191);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(271, 20);
             this.precioTextBox.TabIndex = 10;
@@ -340,35 +345,55 @@
             // 
             this.openFileDialog1.Filter = "jpg,png | .jpg;*.png";
             // 
-            // listaProductosBindingSource
+            // categoriaIdcomboBox1
             // 
-            this.listaProductosBindingSource.DataSource = typeof(BL.Lacteos.Producto);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(126, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(271, 21);
-            this.comboBox1.TabIndex = 15;
+            this.categoriaIdcomboBox1.DataSource = this.listaProductosBindingSource;
+            this.categoriaIdcomboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoriaIdcomboBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoriaIdcomboBox1.FormattingEnabled = true;
+            this.categoriaIdcomboBox1.Location = new System.Drawing.Point(123, 79);
+            this.categoriaIdcomboBox1.Name = "categoriaIdcomboBox1";
+            this.categoriaIdcomboBox1.Size = new System.Drawing.Size(271, 24);
+            this.categoriaIdcomboBox1.TabIndex = 15;
+            this.categoriaIdcomboBox1.ValueMember = "Id";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 96);
+            this.label1.Location = new System.Drawing.Point(28, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "Categoria";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Tipo";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(123, 117);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(271, 21);
+            this.comboBox2.TabIndex = 17;
             // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 336);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.categoriaIdcomboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fotoPictureBox);
@@ -388,8 +413,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).EndInit();
             this.listaProductosBindingNavigator.ResumeLayout(false);
             this.listaProductosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,7 +446,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox categoriaIdcomboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
+    }
+}
+
+namespace BL.Lacteos
+{
+    class Producto
+    {
     }
 }

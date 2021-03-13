@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 
 namespace BL.Lacteos
 {
-    class CategoriasBL
+    public class CategoriaBL
     {
         Contexto _contexto;
-
         public BindingList<Categoria> ListaCategorias { get; set; }
 
-        public CategoriasBL()
+
+        public CategoriaBL()
         {
             _contexto = new Contexto();
             ListaCategorias = new BindingList<Categoria>();
         }
+
 
         public BindingList<Categoria> ObtenerCategorias()
         {
@@ -27,11 +28,14 @@ namespace BL.Lacteos
 
             return ListaCategorias;
         }
+
     }
+
 
     public class Categoria
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
     }
+
 }
