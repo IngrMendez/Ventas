@@ -62,7 +62,7 @@
             this.categoriaIdcomboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tipoIdcomboBox2 = new System.Windows.Forms.ComboBox();
             descripcionLabel = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
@@ -377,13 +377,17 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Tipo";
             // 
-            // comboBox2
+            // tipoIdcomboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(123, 117);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(271, 21);
-            this.comboBox2.TabIndex = 17;
+            this.tipoIdcomboBox2.DisplayMember = "Descripcion";
+            this.tipoIdcomboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoIdcomboBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoIdcomboBox2.FormattingEnabled = true;
+            this.tipoIdcomboBox2.Location = new System.Drawing.Point(123, 117);
+            this.tipoIdcomboBox2.Name = "tipoIdcomboBox2";
+            this.tipoIdcomboBox2.Size = new System.Drawing.Size(271, 24);
+            this.tipoIdcomboBox2.TabIndex = 17;
+            this.tipoIdcomboBox2.ValueMember = "Id";
             // 
             // FormProductos
             // 
@@ -391,7 +395,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 336);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.tipoIdcomboBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.categoriaIdcomboBox1);
             this.Controls.Add(this.button2);
@@ -449,7 +453,7 @@
         private System.Windows.Forms.ComboBox categoriaIdcomboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox tipoIdcomboBox2;
     }
 }
 

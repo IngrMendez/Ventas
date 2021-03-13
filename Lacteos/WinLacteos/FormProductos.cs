@@ -17,8 +17,9 @@ namespace WinLacteos
 
         ProductosBL _productos;
         CategoriaBL _categorias;
+        TiposBL _tiposBL;
 
-        private object listaCategoriasBindingSource;
+     
 
         public FormProductos()
         {
@@ -29,6 +30,11 @@ namespace WinLacteos
 
             _categorias = new CategoriaBL();
             listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
+            tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
+  
 
         }
 
