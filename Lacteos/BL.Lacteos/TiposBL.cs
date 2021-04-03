@@ -11,7 +11,7 @@ namespace BL.Lacteos
 {
     class TiposBL
     {
-         Contexto _contexto;
+        Contexto _contexto;
         public BindingList<Tipo> ListaTipos { get; set; }
 
         public TiposBL()
@@ -27,10 +27,11 @@ namespace BL.Lacteos
             ListaTipos = _contexto.Tipos.Local.ToBindingList();
 
             return ListaTipos;
-            }
         }
+    }
+
     public class Tipo
-        {
+    {
         public int Id { get; set; }
         public string Descripcion { get; set; }
     }

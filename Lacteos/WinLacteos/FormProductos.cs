@@ -18,8 +18,7 @@ namespace WinLacteos
         ProductosBL _productos;
         CategoriaBL _categorias;
         TiposBL _tiposBL;
-
-     
+        private object listaTiposBindingSource;
 
         public FormProductos()
         {
@@ -31,10 +30,8 @@ namespace WinLacteos
             _categorias = new CategoriaBL();
             listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
 
-            tiposBL = new TiposBL();
+            _tiposBL = new TiposBL();
             listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
-
-  
 
         }
 
@@ -53,14 +50,14 @@ namespace WinLacteos
             }
 
             var resultado = _productos.GuardarProducto(producto);
-        if (resultado.Exitoso == true)
+            if (resultado.Exitoso == true)
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
                 MessageBox.Show("Producto guardado");
             }
-        else
-                {
+            else
+            {
                 MessageBox.Show(resultado.Mensaje);
             }
         }
@@ -89,23 +86,23 @@ namespace WinLacteos
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-           
+
 
             if (idTextBox.Text != "")
-                 {
+            {
                 var resultado = MessageBox.Show("Desea eliminar este registro", "Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(idTextBox.Text);
                     Eliminar(id);
                 }
-               
+
             }
         }
 
         private void Eliminar(int id)
         {
-          
+
             var resultado = _productos.EliminarProducto(id);
 
             if (resultado == true)
@@ -129,21 +126,21 @@ namespace WinLacteos
             var producto = (Producto)listaProductosBindingSource.Current;
 
             if (producto != null)
-                { 
-
-            openFileDialog1.ShowDialog();
-            var archivo = openFileDialog1.FileName;
-
-            if (archivo != "")
             {
-                var fileInfo = new FileInfo(archivo);
-                var fileStream = fileInfo.OpenRead();
 
-                fotoPictureBox.Image = Image.FromStream(fileStream);
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var fileStream = fileInfo.OpenRead();
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);
                 }
             }
             else
-                {
+            {
                 MessageBox.Show("Cree un producto antes de asignarle una imagen");
             }
         }

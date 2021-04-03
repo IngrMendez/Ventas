@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BL.Lacteos
 {
-    class DatosdeInicioCreateDatabaseIfNotExists<Contexto>
+    class DatosdeInicio : CreateDatabaseIfNotExists<Contexto>
 
     {
         protected override void Seed(Contexto contexto)
@@ -18,24 +19,21 @@ namespace BL.Lacteos
             contexto.Usuarios.Add(usuarioAdmin);
 
             var categoria1 = new Categoria();
-            categoria1.Descripcion = "Categoria 1";
+            categoria1.Descripcion = "Leches";
             contexto.Categorias.Add(categoria1);
 
 
             var categoria2 = new Categoria();
-            categoria2.Descripcion = "Categoria 2";
+            categoria2.Descripcion = "Quesos";
             contexto.Categorias.Add(categoria2);
 
             var tipo1 = new Tipo();
-            tipo1.Descripcion = "Tipo 1";
+            tipo1.Descripcion = "Liquidos";
             contexto.Tipos.Add(tipo1);
 
             var tipo2 = new Tipo();
-            tipo2.Descripcion = "Tipo 2";
+            tipo2.Descripcion = "Solidos";
             contexto.Tipos.Add(tipo2);
-
-
-
 
             base.Seed(contexto);
 

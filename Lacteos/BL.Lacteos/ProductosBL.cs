@@ -11,7 +11,7 @@ namespace BL.Lacteos
     public class ProductosBL
     {
         Contexto _contexto;
-        BindingList<Producto> ListaProductos { get; set; }
+        public BindingList<Producto> ListaProductos { get; set; }
 
         public ProductosBL()
         {
@@ -30,12 +30,12 @@ namespace BL.Lacteos
         public Resultado GuardarProducto(Producto producto)
         {
             var resultado = Validar(producto);
-            if (resultado.Exitoso == false) 
+            if (resultado.Exitoso == false)
             {
                 return resultado;
             }
             _contexto.SaveChanges();
-   
+
             resultado.Exitoso = true;
             return resultado;
         }
@@ -60,6 +60,7 @@ namespace BL.Lacteos
             }
             return false;
         }
+
         private Resultado Validar(Producto producto)
         {
             var resultado = new Resultado();
@@ -90,21 +91,24 @@ namespace BL.Lacteos
             {
                 resultado.Mensaje = "El precio debe ser mayor que cero";
                 resultado.Exitoso = false;
-                if (producto.TipoId == 0)
-                {
-                    resultado.Mensaje = "Seleccione un Tipo";
-                    resultado.Exitoso = false;
-                }
-
-                if (producto.CategoriaId == 0)
-                {
-                    resultado.Mensaje = "Seleccione una categoria";
-                    resultado.Exitoso = false;
-                }
-
-                return resultado;
             }
+
+            if (producto.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un Tipo";
+                resultado.Exitoso = false;
+            }
+
+            if (producto.CategoriaId == 0)
+            {
+                resultado.Mensaje = "Seleccione una categoria";
+                resultado.Exitoso = false;
+            }
+
+            return resultado;
+        }
     }
+
     public class Producto
     {
         public int Id { get; set; }
@@ -118,10 +122,10 @@ namespace BL.Lacteos
         public byte[] Foto { get; set; }
         public bool Activo { get; set; }
     }
+
     public class Resultado
-        {
+    {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
-        }
     }
 }

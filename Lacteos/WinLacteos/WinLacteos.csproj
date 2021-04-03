@@ -116,10 +116,15 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Lacteos.Categoria.datasource" />
+    <None Include="Properties\DataSources\BL.Lacteos.CategoriaBL.datasource" />
     <None Include="Properties\DataSources\BL.Lacteos.Contexto.datasource" />
     <None Include="Properties\DataSources\BL.Lacteos.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Lacteos.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Lacteos.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.Lacteos.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Lacteos.Tipo.datasource" />
+    <None Include="Properties\DataSources\BL.Lacteos.Usuario.datasource" />
     <None Include="Properties\DataSources\FormClientes.datasource" />
     <None Include="Properties\DataSources\FormLogin.datasource" />
     <None Include="Properties\DataSources\FormMenu.datasource" />

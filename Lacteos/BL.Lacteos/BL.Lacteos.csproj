@@ -63,10 +63,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\Categoria.datasource" />
+    <None Include="Properties\DataSources\CategoriaBL.datasource" />
     <None Include="Properties\DataSources\Contexto.datasource" />
+    <None Include="Properties\DataSources\DatosdeInicio.datasource" />
+    <None Include="Properties\DataSources\Producto.datasource" />
     <None Include="Properties\DataSources\ProductosBL.datasource" />
     <None Include="Properties\DataSources\Resultado.datasource" />
     <None Include="Properties\DataSources\SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\Tipo.datasource" />
+    <None Include="Properties\DataSources\TiposBL.datasource" />
+    <None Include="Properties\DataSources\Usuario.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
