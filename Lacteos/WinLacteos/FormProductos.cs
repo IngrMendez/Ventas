@@ -18,8 +18,8 @@ namespace WinLacteos
         ProductosBL _productos;
         CategoriaBL _categorias;
         TiposBL _tiposBL;
-        private object listaTiposBindingSource;
 
+  
         public FormProductos()
         {
             InitializeComponent();

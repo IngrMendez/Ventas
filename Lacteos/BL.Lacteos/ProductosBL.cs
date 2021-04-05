@@ -61,6 +61,11 @@ namespace BL.Lacteos
             return false;
         }
 
+        public object GuardarProducto(global::WinLacteos.Producto producto)
+        {
+            throw new NotImplementedException();
+        }
+
         private Resultado Validar(Producto producto)
         {
             var resultado = new Resultado();
